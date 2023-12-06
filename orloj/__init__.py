@@ -2,7 +2,7 @@
 # coding:utf-8
 # Copyright (C) 2023 All rights reserved.
 # FILENAME:    ~~/orloj/__init__.py
-# VERSION: 	   0.1.0
+# VERSION: 	   0.1.1
 # CREATED: 	   2023-12-06 21:54
 # AUTHOR: 	   Sitt Guruvanich <aekazitt+github@gmail.com>
 # DESCRIPTION:
@@ -12,7 +12,7 @@
 """Scheduler middleware for ASGI frameworks
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 
 from orloj.core import OrlojMiddleware
