@@ -31,9 +31,6 @@ MANIFEST
 # Environments
 **.env
 
-# Generated protobuf modules
-src/protos
-
 # OSX Indexers
 **/.DS_Store
 
