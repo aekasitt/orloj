@@ -10,7 +10,32 @@
 
 [![Orloj banner](static/orloj-banner.svg)](static/orloj-banner.svg)
 
-## Getting Started
+## Getting started
+
+You can use `orloj` simply by installing via `pip` on your Terminal.
+
+```sh
+pip install orloj
+```
+
+or alternatively when using [poetry](https://python-poetry.org) package manager as such:
+
+```sh
+poetry add orloj
+```
+
+And then you can begin using `OrlojMiddleware` in your ASGI project as such
+
+```python
+...
+from orloj import OrlojMiddleware
+
+def action() -> None:
+  """Action to be called by scheduler"""
+
+app.add_middleware(OrlojMiddleware, interval=3, job=action)  # Schedules for 3 second interval
+...
+```
 
 The following example shows you how to setup `OrlojMiddleware` to run scheduled tasks alongside
 your [FastAPI](https://github.com/tiangolo/fastapi) application.
