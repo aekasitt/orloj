@@ -15,7 +15,7 @@
 from fastapi import FastAPI
 from logging import Logger, getLogger
 from starlette.responses import PlainTextResponse, RedirectResponse
-from src.core import OrlojMiddleware
+from orloj import OrlojMiddleware
 
 app = FastAPI()
 logger: Logger = getLogger("uvicorn")

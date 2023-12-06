@@ -21,9 +21,7 @@ authors = ['Sitt Guruvanich <aekazitt+github@gmail.com>']
 description = 'Scheduler middleware for ASGI frameworks'
 license = 'MIT'
 name = 'orloj'
-packages = [
-  {include='src'}
-]
+packages = [{include='orloj'}]
 readme = 'README.md'
 version = '0.1.0'
 
