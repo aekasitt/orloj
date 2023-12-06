@@ -40,6 +40,9 @@ src/protos
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow
 __pypackages__/
 
+# Pypi token
+pypi-token.pypi
+
 # Sphinx documentation
 docs/_build/
 doc/_build/
