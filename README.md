@@ -71,6 +71,16 @@ app.add_middleware(OrlojMiddleware, interval=3, job=hello_name, name="Igor")
 app.add_middleware(OrlojMiddleware, interval=6, job=hello_world)
 ```
 
+## Dependencies
+
+* [APScheduler](https://github.com/agronholm/apscheduler)
+  [![PyPI](https://img.shields.io/badge/PyPI-3775A9?logo=pypi&logoColor=white)](https://pypi.org/project/APScheduler)
+  [![Docs](https://img.shields.io/readthedocs/apscheduler?logo=readthedocs)](https://apscheduler.readthedocs.io/en/3.x)
+
+* [starlette](https://www.starlette.io)
+  [![PyPI](https://img.shields.io/badge/PyPI-3775A9?logo=pypi&logoColor=white)](https://pypi.org/project/starlette)
+  [![Docs](https://img.shields.io/badge/MkDocs-526CFE?logo=materialformkdocs&logoColor=white)](https://www.starlette.io)
+
 ## Contributions
 
 To contribute to the project, fork the repository and clone to your local device and development
