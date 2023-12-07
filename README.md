@@ -99,6 +99,7 @@ poetry install --with dev
 
 ## Acknowledgements
 
+* [APScheduler Web Examples](https://github.com/agronholm/apscheduler/tree/master/examples/web)
 * [Wikimedia Commons - File:Prague Astronomical Clock.svg](https://commons.wikimedia.org/wiki/File:Prague_Astronomical_Clock.svg)
 
 ## License
