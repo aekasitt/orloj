@@ -23,13 +23,13 @@ license = 'MIT'
 name = 'orloj'
 packages = [{include='orloj'}]
 readme = 'README.md'
-version = '0.1.1'
+version = '0.1.2'
 
 
 [tool.poetry.dependencies]
 APScheduler = '>=3.10.4,<4.0.0'
 python = '^3.8'
-starlette = '<0.28.0'
+starlette = '<0.37.2'
 
 
 [tool.poetry.group.dev]
@@ -49,4 +49,3 @@ optional = true
 [tool.poetry.group.examples.dependencies]
 fastapi = '^0.104.0'
 uvicorn = '^0.15.0'
-
