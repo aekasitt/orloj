@@ -17,6 +17,7 @@ from fastapi import FastAPI
 from logging import Logger, getLogger
 from orloj import OrlojMiddleware
 from starlette.responses import PlainTextResponse, RedirectResponse
+from uuid import uuid4 as uuid
 
 app = FastAPI()
 logger: Logger = getLogger("uvicorn")
@@ -37,7 +38,8 @@ async def health() -> str:
     return "OK"
 
 
-app.add_middleware(OrlojMiddleware, interval=3, job=async_hello_world)
+job_id: str = str(uuid()).replace("-", "")
+app.add_middleware(OrlojMiddleware, interval=3, job=async_hello_world, job_id=job_id)
 
 
-__all__ = ["app"]
+__all__ = ("app",)

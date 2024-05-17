@@ -18,4 +18,4 @@ __version__ = "0.1.2"
 from orloj.core import OrlojMiddleware
 
 
-__all__ = ["OrlojMiddleware"]
+__all__ = ("OrlojMiddleware",)
