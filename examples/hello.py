@@ -2,7 +2,7 @@
 # coding:utf-8
 # Copyright (C) 2023-2024 All rights reserved.
 # FILENAME:    ~~/examples/hello.py
-# VERSION:     0.1.2
+# VERSION:     0.1.3
 # CREATED:     2023-12-06 21:54
 # AUTHOR:      Sitt Guruvanich <aekazitt+github@gmail.com>
 # DESCRIPTION:
