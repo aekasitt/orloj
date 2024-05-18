@@ -67,8 +67,12 @@ async def health() -> str:
   """
   return "OK"
 
-app.add_middleware(OrlojMiddleware, interval=3, job=hello_name, job_id="hello-igor", name="Igor")
-app.add_middleware(OrlojMiddleware, interval=6, job=hello_world, job_id="hello-world")
+app.add_middleware(
+  OrlojMiddleware, interval=3, job=hello_name, job_id="hello-igor", name="Igor"
+)
+app.add_middleware(
+  OrlojMiddleware, interval=6, job=hello_world, job_id="hello-world"
+)
 ```
 
 ## Dependencies
