@@ -33,7 +33,7 @@ from orloj import OrlojMiddleware
 def action() -> None:
   """Action to be called by scheduler"""
 
-app.add_middleware(OrlojMiddleware, interval=3, job=action)  # Schedules for 3 second interval
+app.add_middleware(OrlojMiddleware, interval=3, job=action, job_id="scheduled-action")
 ...
 ```
 
@@ -67,8 +67,8 @@ async def health() -> str:
   """
   return "OK"
 
-app.add_middleware(OrlojMiddleware, interval=3, job=hello_name, name="Igor")
-app.add_middleware(OrlojMiddleware, interval=6, job=hello_world)
+app.add_middleware(OrlojMiddleware, interval=3, job=hello_name, job_id="hello-igor", name="Igor")
+app.add_middleware(OrlojMiddleware, interval=6, job=hello_world, job_id="hello-world")
 ```
 
 ## Dependencies
