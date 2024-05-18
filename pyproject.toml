@@ -31,9 +31,10 @@ optional = true
 
 
 [tool.poetry.group.dev.dependencies]
+httpx = '^0.27.0'
 mypy = '^1.7.1'
 pytest = '^7.4.3'
-ruff = "^0.4.4"
+ruff = '^0.4.4'
 
 
 [tool.poetry.group.examples]
@@ -43,6 +44,13 @@ optional = true
 [tool.poetry.group.examples.dependencies]
 fastapi = '^0.109.0'
 uvicorn = '^0.15.0'
+
+
+[tool.pytest.ini_options]
+addopts = '--strict-markers --tb=short -s -rxXs'
+filterwarnings = [ 'ignore::DeprecationWarning' ]
+python_files = '*.py'
+testpaths = [ 'tests' ]
 
 
 [tool.ruff]
