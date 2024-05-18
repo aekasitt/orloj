@@ -9,8 +9,7 @@
 #
 # HISTORY:
 # *************************************************************
-"""Scheduler middleware for ASGI frameworks
-"""
+"""Scheduler middleware for ASGI frameworks"""
 
 __version__ = "0.1.3"
 

@@ -86,9 +86,9 @@ app.add_middleware(OrlojMiddleware, interval=6, job=hello_world)
 To contribute to the project, fork the repository and clone to your local device and development
 dependencies including three extra libraries not included in final builds as such:
 
-* [black](https://github.com/psf/black) - The uncompromising Python code formatter 
 * [mypy](https://github.com/python/mypy) - Optional static typing for Python
 * [pytest](https://github.com/pytest-dev/pytest) - The pytest framework makes it easy to write small tests, yet scales to support complex functional testing
+* [ruff](https://github.com/astral-sh/ruff) - An extremely fast Python linter and code formatter, written in Rust. 
 
 Use the following commands to setup your local environment with development dependencies:
 

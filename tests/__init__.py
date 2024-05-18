@@ -9,8 +9,8 @@
 #
 # HISTORY:
 # *************************************************************
-"""Module defining test_client fixture used by test suites under tests/ directory.
-"""
+"""Module defining test_client fixture used by test suites under tests/ directory."""
+
 ### Standard Packages ###
 from pytest import fixture
 
@@ -25,18 +25,18 @@ from orloj import OrlojMiddleware
 
 @fixture
 def test_client() -> TestClient:
-    """
-    Sets up a FastAPI TestClient with OrlojMiddleware updating local pickle file created and
-    destroyed by lifespan asynccontextmanager.
+  """
+  Sets up a FastAPI TestClient with OrlojMiddleware updating local pickle file created and
+  destroyed by lifespan asynccontextmanager.
 
-    ---
-    :returns: TestClient
-    """
-    app = FastAPI()
+  ---
+  :returns: TestClient
+  """
+  app = FastAPI()
 
-    # TODO: create lifespan asynccontextmanager and two endpoints
-    # 1: /reset - resets the clock and start state at 10
-    # 2: /state - get countdown state
-    # with the orlojmiddleware counting down from ten and saving state to pickle-file
-    # read only by /state endpoint
-    return TestClient(app)
+  # TODO: create lifespan asynccontextmanager and two endpoints
+  # 1: /reset - resets the clock and start state at 10
+  # 2: /state - get countdown state
+  # with the orlojmiddleware counting down from ten and saving state to pickle-file
+  # read only by /state endpoint
+  return TestClient(app)

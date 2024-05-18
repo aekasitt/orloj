@@ -9,8 +9,7 @@
 #
 # HISTORY:
 # *************************************************************
-"""Example for using Orloj middleware with FastAPI application and asynchronous jobs
-"""
+"""Example for using Orloj middleware with FastAPI application and asynchronous jobs"""
 
 from asyncio import sleep
 from fastapi import FastAPI
@@ -24,18 +23,18 @@ logger: Logger = getLogger("uvicorn")
 
 
 async def async_hello_world() -> None:
-    await sleep(1)
-    logger.info("Hello, World!")
+  await sleep(1)
+  logger.info("Hello, World!")
 
 
 @app.get("/")
 async def redirect_to_swagger_docs() -> RedirectResponse:
-    return RedirectResponse("/docs")
+  return RedirectResponse("/docs")
 
 
 @app.get("/health", response_class=PlainTextResponse, status_code=200)
 async def health() -> str:
-    return "OK"
+  return "OK"
 
 
 job_id: str = str(uuid()).replace("-", "")

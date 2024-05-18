@@ -9,8 +9,7 @@
 #
 # HISTORY:
 # *************************************************************
-"""Example for using Orloj middleware with FastAPI application and parametrized jobs
-"""
+"""Example for using Orloj middleware with FastAPI application and parametrized jobs"""
 
 from fastapi import FastAPI
 from logging import Logger, getLogger
@@ -23,21 +22,21 @@ logger: Logger = getLogger("uvicorn")
 
 
 def hello_name(name: str) -> None:
-    logger.info(f"Hello, {name}!")
+  logger.info(f"Hello, {name}!")
 
 
 def hello_world() -> None:
-    logger.info("Hello, World!")
+  logger.info("Hello, World!")
 
 
 @app.get("/")
 async def redirect_to_swagger_docs() -> str:
-    return "OK"
+  return "OK"
 
 
 @app.get("/health", response_class=PlainTextResponse, status_code=200)
 async def health() -> str:
-    return "OK"
+  return "OK"
 
 
 job_id_name: str = str(uuid()).replace("-", "")

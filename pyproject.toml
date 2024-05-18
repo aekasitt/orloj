@@ -1,12 +1,6 @@
 [build-system]
-requires = ['poetry-core']
 build-backend = 'poetry.core.masonry.api'
-
-
-[tool.black]
-include = '\.pyi?$'
-line-length = 100
-target-version = ['py38', 'py39', 'py310', 'py311']
+requires = ['poetry-core']
 
 
 [tool.mypy]
@@ -17,7 +11,7 @@ ignore_missing_imports = true
 
 
 [tool.poetry]
-authors = ['Sitt Guruvanich <aekazitt+github@gmail.com>']
+authors = [ 'Sitt Guruvanich <aekazitt+github@gmail.com>' ]
 description = 'Scheduler middleware for ASGI frameworks'
 license = 'MIT'
 name = 'orloj'
@@ -39,6 +33,7 @@ optional = true
 [tool.poetry.group.dev.dependencies]
 mypy = '^1.7.1'
 pytest = '^7.4.3'
+ruff = "^0.4.4"
 
 
 [tool.poetry.group.examples]
@@ -48,3 +43,13 @@ optional = true
 [tool.poetry.group.examples.dependencies]
 fastapi = '^0.109.0'
 uvicorn = '^0.15.0'
+
+
+[tool.ruff]
+indent-width = 2
+line-length = 100
+target-version = 'py39'
+
+
+[tool.ruff.lint.per-file-ignores]
+'__init__.py' = [ 'F401' ]  # Ignore unused imports
