@@ -33,6 +33,27 @@ def test_countdown() -> None:
     sleep(1)
     response = test_client.get("/")
     assert response.text == "8"
+    sleep(1)
+    response = test_client.get("/")
+    assert response.text == "7"
+    sleep(1)
+    response = test_client.get("/")
+    assert response.text == "6"
+    sleep(1)
+    response = test_client.get("/")
+    assert response.text == "5"
+    sleep(1)
+    response = test_client.get("/")
+    assert response.text == "4"
+    sleep(1)
+    response = test_client.get("/")
+    assert response.text == "3"
+    sleep(1)
+    response = test_client.get("/")
+    assert response.text == "2"
+    sleep(1)
+    response = test_client.get("/")
+    assert response.text == "1"
     response = test_client.put("/")
     assert response.text == "OK"
     response = test_client.get("/")
