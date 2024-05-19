@@ -15,7 +15,7 @@
 from contextlib import asynccontextmanager
 from os import path, remove
 from pickle import PickleError, dump, load
-from typing import AsyncIterator, Generator
+from typing import AsyncGenerator
 
 ### Third-Party Packages ###
 from fastapi import Depends, FastAPI, Request
@@ -29,7 +29,8 @@ from orloj import OrlojMiddleware
 TEST_PICKLE: str = "tests/orloj.pickle"
 
 
-async def lifespan(_: FastAPI) -> AsyncIterator[None]:
+@asynccontextmanager
+async def lifespan(_: FastAPI) -> AsyncGenerator[None, None]:
   countdown: int = 10
   if path.exists(TEST_PICKLE):
     remove(TEST_PICKLE)
