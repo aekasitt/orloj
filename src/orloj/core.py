@@ -2,7 +2,7 @@
 # coding:utf-8
 # Copyright (C) 2023-2024 All rights reserved.
 # FILENAME:    ~~/orloj/core.py
-# VERSION:     0.1.3
+# VERSION:     0.1.4
 # CREATED:     2023-12-06 21:54
 # AUTHOR:      Sitt Guruvanich <aekazitt+github@gmail.com>
 # DESCRIPTION:
