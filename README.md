@@ -18,10 +18,10 @@ You can use `orloj` simply by installing via `pip` on your Terminal.
 pip install orloj
 ```
 
-or alternatively when using [poetry](https://python-poetry.org) package manager as such:
+or alternatively when using [uv](https://docs.astral.sh/uv) package manager as such:
 
 ```sh
-poetry add orloj
+uv add orloj
 ```
 
 And then you can begin using `OrlojMiddleware` in your ASGI project as such
@@ -97,8 +97,10 @@ dependencies including three extra libraries not included in final builds as suc
 Use the following commands to setup your local environment with development dependencies:
 
 ```bash
-pip install --user poetry
-poetry install --with dev
+pyenv shell 3.8.18
+uv venv --python-preference system
+source .venv/bin/activate
+uv sync --dev
 ```
 
 ## Acknowledgements
