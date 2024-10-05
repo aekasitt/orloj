@@ -1,18 +1,11 @@
 [build-system]
-build-backend = 'poetry.core.masonry.api'
-requires = ['poetry-core']
+build-backend = 'hatchling.build'
+requires = [ 'hatchling' ]
 
 
-[tool.mypy]
-disallow_untyped_calls = true
-disallow_untyped_defs = true
-disallow_incomplete_defs = true
-ignore_missing_imports = true
-
-
-[tool.poetry]
+[project]
 authors = [
-  'Sitt Guruvanich <aekazitt+github@gmail.com>',
+  { email = 'aekazitt+github@gmail.com', name = 'Sitt Guruvanich' },
 ]
 classifiers = [
   'Development Status :: 3 - Alpha',
@@ -31,6 +24,10 @@ classifiers = [
   'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
   'Typing :: Typed',
 ]
+dependencies = [
+  'APScheduler >=4.0.0a5,<5.0.0',
+  'starlette <0.37.2',
+]
 description = 'Scheduler middleware for ASGI frameworks'
 keywords = [
   'asgi',
@@ -46,33 +43,22 @@ license = 'MIT'
 name = 'orloj'
 packages = [{ from='src', include='orloj' }]
 readme = 'README.md'
+requires-python = '>=3.8'
 version = '0.1.4'
 
 
-[tool.poetry.dependencies]
-APScheduler = '>=4.0.0a5,<5.0.0'
-python = '^3.8'
-starlette = '<0.37.2'
+[project.optional-dependencies]
+examples = [
+  'fastapi >=0.109.0',
+  'uvicorn >=0.15.0',
+]
 
 
-[tool.poetry.group.dev]
-optional = true
-
-
-[tool.poetry.group.dev.dependencies]
-httpx = '^0.27.0'
-mypy = '^1.7.1'
-pytest = '^7.4.3'
-ruff = '^0.4.4'
-
-
-[tool.poetry.group.examples]
-optional = true
-
-
-[tool.poetry.group.examples.dependencies]
-fastapi = '^0.109.0'
-uvicorn = '^0.15.0'
+[tool.mypy]
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+ignore_missing_imports = true
 
 
 [tool.pytest.ini_options]
@@ -90,3 +76,12 @@ target-version = 'py39'
 
 [tool.ruff.lint.per-file-ignores]
 '__init__.py' = [ 'F401' ]  # Ignore unused imports
+
+
+[tool.uv]
+dev-dependencies = [
+  'httpx >=0.27.0',
+  'mypy >=1.7.1',
+  'pytest >=7.4.3',
+  'ruff >=0.4.4',
+]
