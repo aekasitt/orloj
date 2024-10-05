@@ -70,3 +70,4 @@ pytestdebug.log
 # Workspace Settings
 .vscode
 .idea
+.ignore
